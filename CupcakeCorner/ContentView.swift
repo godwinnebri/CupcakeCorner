@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var order = Order()
+    
     var body: some View {
-        VStack{
+        NavigationStack {
+            
+            
             AsyncImage(url: URL(string: "https://foundations.projectpythia.org/_images/GitHub-logo.png")) { image in
-                    image
+                image
                     .resizable()
                     .scaledToFit()
             } placeholder: {
@@ -21,7 +25,22 @@ struct ContentView: View {
                     Text("Placeholder")
                 }
             }
-            .frame(width: 200, height: 200)
+            .frame(width: 100, height: 100)
+            
+            //
+            
+            
+            Form{
+            
+                Section{
+                    Picker("Select your cake type", selection: $order.type){
+                        ForEach(Order.types.indices, id: \.self) {
+                            Text(Order.types[$0])
+                        }
+                    }
+                }
+                
+            }
         }
     }
     
