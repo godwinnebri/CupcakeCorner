@@ -60,8 +60,8 @@
 				CE22614E2B169B2300A48EA1 /* CupcakeCornerApp.swift */,
 				CE2261502B169B2300A48EA1 /* ContentView.swift */,
 				CE14FC3B2B20B9F4002C5A33 /* CheckOutView.swift */,
-				CE14FC372B1E35BA002C5A33 /* Order.swift */,
 				CE14FC392B20A389002C5A33 /* AddressView.swift */,
+				CE14FC372B1E35BA002C5A33 /* Order.swift */,
 				CE2261522B169B2600A48EA1 /* Assets.xcassets */,
 				CE2261542B169B2600A48EA1 /* Preview Content */,
 			);

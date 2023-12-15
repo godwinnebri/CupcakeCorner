@@ -24,4 +24,37 @@ class Order {
     }
     var extraFrosting = false
     var addSprinkles = false
+    
+    var name = ""
+    var streetAddress = ""
+    var city = ""
+    var zip = ""
+    
+    var hasValidAddress: Bool {
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+            return true
+        }
+        
+        return false
+    }
+    
+    var cost: Decimal {
+        // $2 per cake
+        var cost = Decimal(quantity) * 2
+        
+        //complicated cakes cost more
+        cost += Decimal(type) / 2
+        
+        // $1 per cake for extra frosting
+        if extraFrosting {
+            cost += Decimal(quantity)
+        }
+        
+        //$0.5 per cake for extra sprinkles
+        if addSprinkles {
+            cost += Decimal(quantity) / 2
+        }
+        
+        return cost
+    }
 }
