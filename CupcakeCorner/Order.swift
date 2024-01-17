@@ -40,6 +40,7 @@ class Order: Codable {
     var addSprinkles = false
     
     var name = ""
+        //name.trimmingCharacters(in: .whitespacesAndNewlines)
     var streetAddress = ""
     var city = ""
     var zip = ""
